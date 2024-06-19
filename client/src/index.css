@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+      grid-column: auto/span 2;
+      grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+background-color: #666e75;
+border-radius: 5px;
+}
+
+@layer components {
+  .txt-primary {
+    @apply font-extrabold text-[#222328] dark:text-[#d5daf0]  text-[32px]
+  }
+  .sm-txt {
+    @apply mt-2 text-[#666e75] dark:text-[#bdbfca] text-[14px]
+    max-w-[500px]
+  }
+}
